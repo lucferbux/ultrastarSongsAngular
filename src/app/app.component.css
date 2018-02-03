@@ -1,0 +1,61 @@
+.container-nav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.ultrastar-sidenav-container {
+    flex: 1;
+    
+}
+
+.my-toolbar {
+    position: fixed;
+
+    z-index: 2;
+}
+
+.body-content{
+    padding-top: 60px;
+}
+
+
+/*Toolbar*/
+.icon-song {
+    padding: 0 14px;
+}
+
+.toolbar-spacer {
+    flex: 1 1 auto;
+}
+
+
+  
+.filter-header {
+    min-height: 64px;
+    padding: 8px 24px 0;
+} 
+
+.example-container {
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+}
+
+.mat-form-field {
+    font-size: 14px;
+    width: 100%;
+}
+
+.mat-table {
+    overflow: auto;
+    height:auto;
+    max-height:150%;
+}
+
+
+  
