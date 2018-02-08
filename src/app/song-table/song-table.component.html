@@ -1,0 +1,43 @@
+<div class="filter-header">
+    <mat-form-field>
+      <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+    </mat-form-field>
+</div>
+
+<div class="example-container mat-elevation-z8">
+
+  <div class="example-loading-shade"
+    *ngIf="isLoadingResults">
+    <mat-spinner *ngIf="isLoadingResults"></mat-spinner>  
+  </div>
+  
+  <mat-table #table [dataSource]="dataSource" matSort>
+
+      <!-- Title Column -->
+      <ng-container matColumnDef="Title">
+        <mat-header-cell *matHeaderCellDef> Title </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.Title}} </mat-cell>
+      </ng-container>
+  
+      <!-- Artist Column -->
+      <ng-container matColumnDef="Artist">
+        <mat-header-cell *matHeaderCellDef> Artist </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.Artist}} </mat-cell>
+      </ng-container>
+  
+      <!-- Genre Column -->
+      <ng-container matColumnDef="Genre">
+        <mat-header-cell *matHeaderCellDef> Genre </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.Genre}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="Year">
+          <mat-header-cell *matHeaderCellDef> Year </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.Year}} </mat-cell>
+        </ng-container>
+  
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+
+</div>

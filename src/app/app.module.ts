@@ -46,12 +46,16 @@ import {
 
 import 'hammerjs';
 import { AppComponent } from './app.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { SongTableComponent } from './song-table/song-table.component';
 
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavbarComponent,
+    SongTableComponent
   ],
   imports: [
     BrowserModule,

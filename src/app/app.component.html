@@ -1,51 +1,9 @@
 <div class="container-nav">
-    <mat-toolbar class="my-toolbar" color="primary" role="header">
-        <span>Ultrastar</span>
-        <span class="toolbar-spacer"></span>
-        <i class="material-icons icon-song">mic</i>
-    </mat-toolbar> 
-
-
+  <app-navbar></app-navbar>
     <mat-sidenav-container class="ultrastar-sidenav-container">
-      
       <mat-sidenav-content class="body-content">
-          
-          <div class="filter-header">
-              <mat-form-field>
-                <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
-              </mat-form-field>
-          </div>
-
-          <div class="example-container mat-elevation-z8">
-            
-            <mat-table #table [dataSource]="dataSource" matSort>
-          
-                <!-- Title Column -->
-                <ng-container matColumnDef="Title">
-                  <mat-header-cell *matHeaderCellDef> Title </mat-header-cell>
-                  <mat-cell *matCellDef="let element"> {{element.Title}} </mat-cell>
-                </ng-container>
-            
-                <!-- Artist Column -->
-                <ng-container matColumnDef="Artist">
-                  <mat-header-cell *matHeaderCellDef> Artist </mat-header-cell>
-                  <mat-cell *matCellDef="let element"> {{element.Artist}} </mat-cell>
-                </ng-container>
-            
-                <!-- Genre Column -->
-                <ng-container matColumnDef="Genre">
-                  <mat-header-cell *matHeaderCellDef> Genre </mat-header-cell>
-                  <mat-cell *matCellDef="let element"> {{element.Genre}} </mat-cell>
-                </ng-container>
-            
-                <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-                <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-            </mat-table>
-          
-          </div>
-
+          <app-song-table></app-song-table>
       </mat-sidenav-content>
-
     </mat-sidenav-container>
 </div>
   
